@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download | Shareonn-File Sharing</title>
+</head>
+
+<body>
+    <h1>File sharing App</h1>
+
+    <section class="download">
+        <% if(locals.error){ %>
+        <h4><%= locals.error %> 😏</h4>
+        <% } else { %>
+        <h3>Your file is ready to download</h3>
+        <div class="download__meta">
+            <h4><%= fileName %></h4>
+            <small><%= parseInt(fileSize/1000) %> KB</small>
+        </div>
+        <div class="send-btn-container">
+            <a href="<%= downloadLink %>">Download file</a>
+        </div>
+        <% } %>
+    </section>
+    </body>
+    </html>
